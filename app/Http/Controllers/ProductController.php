@@ -45,7 +45,7 @@ class ProductController extends Controller
         if ($request->hasFile('image')) {
             $mainImage = 'product_' . time() . '.' . $request->image->extension();
             $request->image->move(public_path('images'), $mainImage);
-        }
+        } 
 
         // Save product record in the database
         Product::create([
