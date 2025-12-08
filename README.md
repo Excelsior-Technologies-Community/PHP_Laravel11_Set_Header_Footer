@@ -1,4 +1,5 @@
 # 🚀 Laravel 11 Header–Footer Layout + Product CRUD  
+### **Made with ❤️ by Hardik Panchal**
 
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-11.x-ff2d20?style=for-the-badge&logo=laravel" />
@@ -94,6 +95,9 @@ HEADER_FOOTER_USING_LAYOUT/
 ├── vite.config.js
 └── README.md
 
+```
+
+---
 
 # ⚙ Installation  
 
@@ -111,9 +115,9 @@ Update `.env`:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=header       
+DB_DATABASE=header      
 DB_USERNAME=root        
-DB_PASSWORD=            
+DB_PASSWORD=             
 
 ```
 
@@ -253,8 +257,6 @@ http://localhost:8000/products
 
 ---
 
-# 📸 Screenshots (Placeholder)
+# 📸 Screenshots
 
-<img width="1150" height="459" alt="image" src="https://github.com/user-attachments/assets/80032fe0-0600-4648-8700-05b25a12efda" />
-
-
+<img width="1150" height="459" alt="image" src="https://github.com/user-attachments/assets/40c65a19-3a75-473f-90cb-a9eed9d47f27" />
