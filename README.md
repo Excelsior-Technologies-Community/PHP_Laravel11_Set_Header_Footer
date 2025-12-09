@@ -1,4 +1,4 @@
-# 🚀 Laravel 11 Header–Footer Layout + Product CRUD  
+# PHP_Laravel12_Set_Header_Footer
 
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-11.x-ff2d20?style=for-the-badge&logo=laravel" />
@@ -8,7 +8,7 @@
 
 ---
 
-# 📌 Overview  
+#  Overview  
 This project demonstrates how to build a **complete Header–Footer layout system using Blade templates** in Laravel, along with a **clean Product CRUD module**.
 
 It includes:
@@ -22,17 +22,17 @@ It includes:
 
 ---
 
-# ⭐ Features  
-- 🧱 Master Layout with `@include`  
-- 🎨 Global Header & Footer  
-- 📦 Full Product CRUD  
-- 🖼 Image support  
-- 📄 Clean folder structure  
-- 🔧 Laravel Blade best practices  
+#  Features  
+-  Master Layout with `@include`  
+-  Global Header & Footer  
+-  Full Product CRUD  
+-  Image support  
+-  Clean folder structure  
+-  Laravel Blade best practices  
 
 ---
 
-# 📁 Folder Structure  
+#  Folder Structure  
 
 ```
 HEADER_FOOTER_USING_LAYOUT/
@@ -98,7 +98,7 @@ HEADER_FOOTER_USING_LAYOUT/
 
 ---
 
-# ⚙ Installation  
+#  Installation  
 
 ```bash
 composer create-project laravel/laravel blog "11.*"
@@ -106,7 +106,7 @@ composer create-project laravel/laravel blog "11.*"
 
 ---
 
-# 🗄 Environment Setup  
+#  Environment Setup  
 
 Update `.env`:
 
@@ -122,7 +122,7 @@ DB_PASSWORD=
 
 ---
 
-# 🏗 Migration  
+#  Migration  
 
 ```bash
 php artisan make:migration create_products_table --create=products
@@ -144,7 +144,7 @@ php artisan migrate
 
 ---
 
-# 🧬 Model  
+#  Model  
 
 `app/Models/Product.php`
 
@@ -162,7 +162,7 @@ class Product extends Model
 
 ---
 
-# 🛣 Routes  
+#  Routes  
 
 `routes/web.php`
 
@@ -174,7 +174,7 @@ Route::resource('products', ProductController::class);
 
 ---
 
-# 🎮 Controller (Important Methods)
+#  Controller (Important Methods)
 
 ### Display Products  
 ```php
@@ -195,9 +195,9 @@ public function store(Request $request) {
 
 ---
 
-# 🖥 Blade Layout System  
+#  Blade Layout System  
 
-## 📌 1. Master Layout (`layout.blade.php`)  
+##  1. Master Layout (`layout.blade.php`)  
 
 Contains:
 
@@ -217,7 +217,7 @@ Contains:
 
 ---
 
-## 📌 2. Header Component (`header.blade.php`)
+##  2. Header Component (`header.blade.php`)
 
 - Navbar  
 - Logo  
@@ -225,13 +225,13 @@ Contains:
 
 ---
 
-## 📌 3. Footer Component (`footer.blade.php`)
+##  3. Footer Component (`footer.blade.php`)
 
 - Simple copyright footer  
 
 ---
 
-# 📄 Blade Pages  
+#  Blade Pages  
 
 ### index.blade.php  
 - Product listing table  
@@ -242,7 +242,7 @@ Contains:
 
 ---
 
-# ▶ Run Application  
+#  Run Application  
 
 ```bash
 php artisan serve
@@ -256,6 +256,6 @@ http://localhost:8000/products
 
 ---
 
-# 📸 Screenshots
+#  Screenshots
 
 <img width="1150" height="459" alt="image" src="https://github.com/user-attachments/assets/40c65a19-3a75-473f-90cb-a9eed9d47f27" />
