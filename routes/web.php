@@ -27,4 +27,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::delete('/products/{id}', [AdminController::class, 'productsDestroy'])->name('products.destroy');
     Route::get('/settings', [AdminController::class, 'settings'])->name('settings');
     Route::post('/settings/update', [AdminController::class, 'settingsUpdate'])->name('settings.update');
-});
+}); 
