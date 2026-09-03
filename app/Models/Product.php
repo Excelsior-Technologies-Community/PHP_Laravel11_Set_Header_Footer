@@ -19,6 +19,19 @@ class Product extends Model
         'status',
         'created_by',
         'updated_by',
+
+        // SEO
+        'seo_meta_title',
+        'seo_meta_description',
+        'seo_meta_key',
+        'seo_meta_image',
+        'seo_canonical',
+
+        // Open Graph
+        'og_meta_title',
+        'og_meta_description',
+        'og_meta_key',
+        'og_meta_image',
     ];
 
     protected $casts = [

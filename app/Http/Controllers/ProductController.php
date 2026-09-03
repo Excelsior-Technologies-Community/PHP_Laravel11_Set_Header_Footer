@@ -64,6 +64,13 @@ class ProductController extends Controller
         return view('products.edit', compact('product'));
     }
 
+    public function show($id)
+{
+    $product = Product::findOrFail($id);
+
+    return view('products.show', compact('product'));
+}
+
     /**
      * Update the specified product in storage.
      */
