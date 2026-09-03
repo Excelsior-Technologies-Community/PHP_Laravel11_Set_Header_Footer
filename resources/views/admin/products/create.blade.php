@@ -53,6 +53,162 @@
                             <option value="0">Inactive</option>
                         </select>
                     </div>
+
+                    {{-- SEO Settings --}}
+                    <div class="col-12">
+                        <hr class="my-4">
+
+                        <h5 class="mb-3">
+                            <i class="bi bi-search me-1"></i>
+                            SEO Settings
+                        </h5>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">SEO Meta Title</label>
+
+                        <input
+                            type="text"
+                            name="seo_meta_title"
+                            class="form-control"
+                            value="{{ old('seo_meta_title') }}"
+                            maxlength="255"
+                            placeholder="Enter SEO meta title">
+
+                        @error('seo_meta_title')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">SEO Keywords</label>
+
+                        <input
+                            type="text"
+                            name="seo_meta_key"
+                            class="form-control"
+                            placeholder="running shoes, sports shoes, shoes"
+                            value="{{ old('seo_meta_key') }}">
+
+                        @error('seo_meta_key')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label class="form-label">SEO Meta Description</label>
+
+                        <textarea
+                            name="seo_meta_description"
+                            class="form-control"
+                            rows="3"
+                            maxlength="500"
+                            placeholder="Enter SEO meta description...">{{ old('seo_meta_description') }}</textarea>
+
+                        @error('seo_meta_description')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Canonical URL</label>
+
+                        <input
+                            type="url"
+                            name="seo_canonical"
+                            class="form-control"
+                            placeholder="https://example.com/products/product-name"
+                            value="{{ old('seo_canonical') }}">
+
+                        @error('seo_canonical')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">SEO Image</label>
+
+                        <input
+                            type="file"
+                            name="seo_meta_image"
+                            class="form-control"
+                            accept="image/jpeg,image/png,image/webp">
+
+                        @error('seo_meta_image')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+
+                    {{-- Open Graph Settings --}}
+                    <div class="col-12">
+                        <hr class="my-4">
+
+                        <h5 class="mb-3">
+                            <i class="bi bi-share me-1"></i>
+                            Open Graph Settings
+                        </h5>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">OG Title</label>
+
+                        <input
+                            type="text"
+                            name="og_meta_title"
+                            class="form-control"
+                            value="{{ old('og_meta_title') }}"
+                            maxlength="255"
+                            placeholder="Enter Open Graph title">
+
+                        @error('og_meta_title')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">OG Keywords</label>
+
+                        <input
+                            type="text"
+                            name="og_meta_key"
+                            class="form-control"
+                            placeholder="running shoes, sports shoes"
+                            value="{{ old('og_meta_key') }}">
+
+                        @error('og_meta_key')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label class="form-label">OG Description</label>
+
+                        <textarea
+                            name="og_meta_description"
+                            class="form-control"
+                            rows="3"
+                            maxlength="500"
+                            placeholder="Enter Open Graph description...">{{ old('og_meta_description') }}</textarea>
+
+                        @error('og_meta_description')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">OG Image</label>
+
+                        <input
+                            type="file"
+                            name="og_meta_image"
+                            class="form-control"
+                            accept="image/jpeg,image/png,image/webp">
+
+                        @error('og_meta_image')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
 
                 <div class="mt-4">
@@ -70,22 +226,22 @@
 </div>
 
 <script>
-function previewImage(input) {
-    let file = input.files[0];
-    let preview = document.getElementById('previewImg');
+    function previewImage(input) {
+        let file = input.files[0];
+        let preview = document.getElementById('previewImg');
 
-    if (file) {
-        let reader = new FileReader();
-        reader.onload = function(e) {
-            preview.src = e.target.result;
-            preview.style.display = 'block';
-            preview.classList.remove('d-none');
-        };
-        reader.readAsDataURL(file);
-    } else {
-        preview.style.display = 'none';
-        preview.classList.add('d-none');
+        if (file) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+                preview.classList.remove('d-none');
+            };
+            reader.readAsDataURL(file);
+        } else {
+            preview.style.display = 'none';
+            preview.classList.add('d-none');
+        }
     }
-}
 </script>
 @endsection
